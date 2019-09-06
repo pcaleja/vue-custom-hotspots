@@ -3,6 +3,8 @@
 - Hotspots that can be easily customized.
 - Easily mappable using rulers and grid.
 
+[Demo Page](https://pcaleja-vue-custom-hotspots.netlify.com/)
+
 ## Project setup
 ```
 npm install
