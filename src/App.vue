@@ -49,7 +49,7 @@
     </figure>
 
     <h2>Code Sample</h2>
-    <pre>{{ codeSample }}</pre>
+    <pre>{{ codeSample.replace(" / ", "/") }}</pre>
   </div>
 </template>
 
@@ -136,7 +136,7 @@ export default {
               }
             }
           }
-        </\script>
+        < / script>
 
         <style>
           .c-tooltip {
