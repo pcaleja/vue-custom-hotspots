@@ -9,6 +9,8 @@
     </header>
 
     <h2>Demo</h2>
+
+    <h3>With Rulers</h3>
     <figure>
       <vue-hotspots
         :data="hotspotsSetOne"
@@ -28,6 +30,7 @@
       <img src="@/assets/graphic-baking-bread-knife-brown.jpg" />
     </figure>
 
+    <h3>Without Rulers</h3>
     <figure>
       <vue-hotspots
         :data="hotspotsSetTwo"
@@ -44,7 +47,7 @@
           </div>
         </template>
       </vue-hotspots>
-      <vue-ruler />
+
       <img src="@/assets/graphic-bean-black-rice-cereal.jpg" />
     </figure>
 
@@ -85,44 +88,47 @@ export default {
 
       codeSample: `
   <template>
-    <figure>
-      <vue-hotspots
-        :data="hotspotsSetOne"
-        @click="toggleTooltip($event)"
-        type="pulse"
-      >
-        <template v-slot:default="{ hotspot }">
-          <div
-            :class="\`c-tooltip \${defineTooltipPosition(hotspot)}\`"
-            v-show="toggledHotspotOne === hotspot.id"
-          >
-            {{ hotspot.label }}
-          </div>
-        </template>
-      </vue-hotspots>
-      <vue-ruler />
-      <img src="@/assets/graphic-baking-bread-knife-brown.jpg" />
-    </figure>
+    <div>
+      <h3>With Rulers</h3>
+      <figure>
+        <vue-hotspots
+          :data="hotspotsSetOne"
+          @click="toggleTooltip($event)"
+          type="pulse"
+        >
+          <template v-slot:default="{ hotspot }">
+            <div
+              :class="\`c-tooltip \${defineTooltipPosition(hotspot)}\`"
+              v-show="toggledHotspotOne === hotspot.id"
+            >
+              {{ hotspot.label }}
+            </div>
+          </template>
+        </vue-hotspots>
+        <vue-ruler />
+        <img src="@/assets/graphic-baking-bread-knife-brown.jpg" />
+      </figure>
 
-    <figure>
-      <vue-hotspots
-        :data="hotspotsSetTwo"
-        type="custom"
-        @mouseenter="toggledHotspotTwo = $event.target.id"
-        @mouseexit="toggledHotspotTwo = ''"
-      >
-        <template v-slot:default="{ hotspot }">
-          <div
-            :class="\`c-tooltip \${defineTooltipPosition(hotspot)}\`"
-            v-show="toggledHotspotTwo === hotspot.id"
-          >
-            {{ hotspot.label }}
-          </div>
-        </template>
-      </vue-hotspots>
-      <vue-ruler />
-      <img src="@/assets/graphic-bean-black-rice-cereal.jpg" />
-    </figure>
+      <h3>Without Rulers</h3>
+      <figure>
+        <vue-hotspots
+          :data="hotspotsSetTwo"
+          type="custom"
+          @mouseenter="toggledHotspotTwo = $event.target.id"
+          @mouseexit="toggledHotspotTwo = ''"
+        >
+          <template v-slot:default="{ hotspot }">
+            <div
+              :class="\`c-tooltip \${defineTooltipPosition(hotspot)}\`"
+              v-show="toggledHotspotTwo === hotspot.id"
+            >
+              {{ hotspot.label }}
+            </div>
+          </template>
+        </vue-hotspots>
+        <img src="@/assets/graphic-bean-black-rice-cereal.jpg" />
+      </figure>
+    </div>
   </template>
 
   <script>
