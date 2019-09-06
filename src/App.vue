@@ -103,6 +103,26 @@ export default {
             <vue-ruler />
             <img src="@/assets/graphic-baking-bread-knife-brown.jpg" />
           </figure>
+
+          <figure>
+            <vue-hotspots
+              :data="hotspotsSetTwo"
+              type="custom"
+              @mouseenter="toggledHotspotTwo = $event.target.id"
+              @mouseexit="toggledHotspotTwo = ''"
+            >
+              <template v-slot:default="{ hotspot }">
+                <div
+                  :class="\`c-tooltip \${defineTooltipPosition(hotspot)}\`"
+                  v-show="toggledHotspotTwo === hotspot.id"
+                >
+                  {{ hotspot.label }}
+                </div>
+              </template>
+            </vue-hotspots>
+            <vue-ruler />
+            <img src="@/assets/graphic-bean-black-rice-cereal.jpg" />
+          </figure>
         </template>
 
         <script>
@@ -133,6 +153,19 @@ export default {
                   { x: 90, y: 20, label: "Brown" },
                   { x: 80, y: 75, label: "White" }
                 ]
+              }
+            },
+
+            methods: {
+              defineTooltipPosition(hotspot) {
+                const position = hotspot.x > 50 ? "left" : "right";
+                return \`c-tooltip--\${position}\`;
+              },
+
+              toggleTooltip(event) {
+                const id = event.target.id;
+                this.toggledHotspotOne =
+                  this.toggledHotspotOne === id ? "" : event.target.id;
               }
             }
           }
