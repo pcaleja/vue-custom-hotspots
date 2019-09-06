@@ -5,7 +5,18 @@
 
 [Demo Page](https://pcaleja-vue-custom-hotspots.netlify.com/)
 
-## Project setup
+
+## Usage
+```
+npm install --save vue-custom-hotspots
+```
+Refer to [Demo Page](https://pcaleja-vue-custom-hotspots.netlify.com/) for code sample
+
+## Dev setup
+```
+git@github.com:pcaleja/vue-custom-hotspots.git
+```
+
 ```
 npm install
 ```
