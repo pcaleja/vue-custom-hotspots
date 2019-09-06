@@ -36,7 +36,7 @@
         :data="hotspotsSetTwo"
         type="custom"
         @mouseenter="toggledHotspotTwo = $event.target.id"
-        @mouseexit="toggledHotspotTwo = ''"
+        @mouseleave="toggledHotspotTwo = ''"
       >
         <template v-slot:default="{ hotspot }">
           <div
@@ -114,7 +114,7 @@ export default {
           :data="hotspotsSetTwo"
           type="custom"
           @mouseenter="toggledHotspotTwo = $event.target.id"
-          @mouseexit="toggledHotspotTwo = ''"
+          @mouseleave="toggledHotspotTwo = ''"
         >
           <template v-slot:default="{ hotspot }">
             <div
