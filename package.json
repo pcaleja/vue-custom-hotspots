@@ -1,6 +1,6 @@
 {
   "name": "vue-custom-hotspots",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Vue hotspots that can easily be customizable and mapped",
   "bugs": {
     "url": "https://github.com/pcaleja/vue-custom-hotspots/issues"
