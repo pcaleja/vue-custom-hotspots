@@ -57,7 +57,8 @@
 </template>
 
 <script>
-import { VueHotspots, VueRuler } from "../package/base.esm.js";
+import VueRuler from "@/components/BaseRuler.vue";
+import VueHotspots from "@/components/BaseHotspots.vue";
 
 export default {
   components: {
