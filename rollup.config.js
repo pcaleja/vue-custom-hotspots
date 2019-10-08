@@ -3,6 +3,7 @@ import commonjs from "rollup-plugin-commonjs";
 import autoprefixer from "autoprefixer";
 
 export default {
+  external: ["vue", "core-js"],
   input: "src/base.js",
   output: {
     file: "package/base.esm.js",

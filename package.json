@@ -1,6 +1,13 @@
 {
   "name": "vue-custom-hotspots",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "description": "Vue hotspots that can easily be customizable and mapped",
+  "bugs": {
+    "url": "https://github.com/pcaleja/vue-custom-hotspots/issues"
+  },
+  "homepage": "https://pcaleja-vue-custom-hotspots.netlify.com",
+  "license": "MIT",
+  "author": "Philip Caleja",
   "files": [
     "package"
   ],
